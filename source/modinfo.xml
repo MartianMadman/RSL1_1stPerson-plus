@@ -1,0 +1,424 @@
+<Mod Name="RSL_1stPerson_v0.1">
+  	<Author>MartianMadman</Author>
+  	<Description>Attempts to improve RSL 1st Person.</Description>
+  	<WebLink Name="Github">https://github.com/MartianMadman</WebLink>
+  	<UserInput>
+    <ListBox Name="VehicleFOV" DisplayName="Vehicle FOV">
+      	<Option Name="85">85</Option>
+		<Option Name="84">84</Option>
+		<Option Name="83">83</Option>
+		<Option Name="82">82</Option>
+		<Option Name="81">81</Option>
+		<Option Name="80">80</Option>
+		<Option Name="79">79</Option>
+		<Option Name="78">78</Option>
+		<Option Name="77">77</Option>
+		<Option Name="76">76</Option>
+		<Option Name="75">75</Option>
+		<Option Name="74">74</Option>
+		<Option Name="73">73</Option>
+		<Option Name="72">72</Option>
+		<Option Name="71">71</Option>
+		<Option Name="70">70</Option>
+		<Option Name="69">69</Option>
+		<Option Name="68">68</Option>
+		<Option Name="67">67</Option>
+		<Option Name="66">66</Option>
+		<Option Name="65">65</Option>
+		<Option Name="64">64</Option>
+		<Option Name="63">63</Option>
+		<Option Name="62">62</Option>
+		<Option Name="61">61</Option>
+		<Option Name="60">60</Option>
+		<Option Name="59">59</Option>
+		<Option Name="58">58</Option>
+		<Option Name="57">57</Option>
+		<Option Name="56">56</Option>
+		<Option Name="55">55</Option>
+		<Option Name="54">54</Option>
+		<Option Name="53">53</Option>
+		<Option Name="52">52</Option>
+		<Option Name="51">51</Option>
+		<Option Name="50">50</Option>
+		<Option Name="49">49</Option>
+		<Option Name="48">48</Option>
+		<Option Name="47">47</Option>
+		<Option Name="46">46</Option>
+		<Option Name="45">45</Option>
+    </ListBox>
+	<ListBox Name="AutoCenter" DisplayName="Vehicle Auto-Centering">
+      	<Option Name="Enabled">0.5</Option>
+		<Option Name="Disabled">0.0</Option>
+    </ListBox>
+	<ListBox Name="Automelee" DisplayName="Melee Auto-Targeting">
+      	<Option Name="Enabled">3.75</Option>
+		<Option Name="Disabled">0.0</Option>
+    </ListBox>
+	</UserInput>
+	  <Changes>
+		<Replace File="data\misc.vpp\player.xtbl" NewFile="newfolder\player.xtbl" />
+		<Replace File="data\misc.vpp\startup_video_sequence.xtbl" NewFile="newfolder\startup_video_sequence.xtbl" />
+		<Edit File="data\misc.vpp\camera_shake.xtbl" LIST_ACTION="COMBINE_BY_FIELD:Name,_Editor\Category">
+			<Camera_Shake>
+				<Name>player_running</Name>
+				<Wobble>
+					<Pitch>0</Pitch>
+					<Yaw>0</Yaw>
+					<Roll>0</Roll>
+					<Variation>0</Variation>
+					</Wobble>
+				<Destabilization>
+					<Pitch>0.0</Pitch>
+					<Yaw>0.0</Yaw>
+					<Roll>0.0</Roll>
+					<Frequency>0.0</Frequency>
+					</Destabilization>
+				<Direct>
+					<Pitch>0</Pitch>
+					<Yaw>0</Yaw>
+					<Roll>0</Roll>
+					</Direct>
+				<Wander>
+					<Pitch>0</Pitch>
+					<Yaw>0</Yaw>
+					<Frequency>0</Frequency>
+					</Wander>
+				<Wander_Direct>
+					<Pitch>0</Pitch>
+					<Yaw>0</Yaw>
+					</Wander_Direct>
+				<Jitter>
+					<Pitch>0</Pitch>
+					<Yaw>0</Yaw>
+					<Roll>0</Roll>
+					</Jitter>
+				<Strength_Graph>
+					<Strength_Element>
+						<Time>0.0</Time>
+						<Wobble>0</Wobble>
+						<Destable>0.0</Destable>
+						<Direct>0.0</Direct>
+						<Wander>0.0</Wander>
+						<Wander_Direct>0.0</Wander_Direct>
+						<Jitter>0</Jitter>
+						<Blur>0</Blur>
+						<Strong_Vibration>0.0</Strong_Vibration>
+						<Weak_Vibration>0.0</Weak_Vibration>
+						<Oscillation1>0.1</Oscillation1>
+						<Oscillation2>0.1</Oscillation2>
+						</Strength_Element>
+					<Strength_Element>
+						<Time>0.5</Time>
+						<Wobble>0</Wobble>
+						<Destable>0.0</Destable>
+						<Direct>0.0</Direct>
+						<Wander>0.0</Wander>
+						<Wander_Direct>0.0</Wander_Direct>
+						<Jitter>0</Jitter>
+						<Blur>0.0</Blur>
+						<Strong_Vibration>0.0</Strong_Vibration>
+						<Weak_Vibration>0.0</Weak_Vibration>
+						<Oscillation1>0.1</Oscillation1>
+						<Oscillation2>0.1</Oscillation2>
+						</Strength_Element>
+					</Strength_Graph>
+				<_Editor>
+					<Category>Entries</Category>
+					</_Editor>
+				<Oscillation1>
+					<Pitch>0.0</Pitch>
+					<Yaw>0.0</Yaw>
+					<Roll>0.1</Roll>
+					<Frequency>1.7</Frequency>
+					</Oscillation1>
+				<Oscillation2>
+					<Pitch>0.0</Pitch>
+					<Yaw>0.0</Yaw>
+					<Roll>0.1</Roll>
+					<Frequency>1.7</Frequency>
+					</Oscillation2>
+				</Camera_Shake>
+			<Camera_Shake>
+				<Name>player_sprinting</Name>
+				<Wobble>
+					<Pitch>0</Pitch>
+					<Yaw>0</Yaw>
+					<Roll>0</Roll>
+					<Variation>0</Variation>
+					</Wobble>
+				<Destabilization>
+					<Pitch>0.0</Pitch>
+					<Yaw>0.0</Yaw>
+					<Roll>0.0</Roll>
+					<Frequency>0.0</Frequency>
+					</Destabilization>
+				<Direct>
+					<Pitch>0</Pitch>
+					<Yaw>0</Yaw>
+					<Roll>0</Roll>
+					</Direct>
+				<Wander>
+					<Pitch>0</Pitch>
+					<Yaw>0</Yaw>
+					<Frequency>0</Frequency>
+					</Wander>
+				<Wander_Direct>
+					<Pitch>0</Pitch>
+					<Yaw>0</Yaw>
+					</Wander_Direct>
+				<Jitter>
+					<Pitch>0</Pitch>
+					<Yaw>0</Yaw>
+					<Roll>0</Roll>
+					</Jitter>
+				<Strength_Graph>
+					<Strength_Element>
+						<Time>0.0</Time>
+						<Wobble>0</Wobble>
+						<Destable>0.0</Destable>
+						<Direct>0.0</Direct>
+						<Wander>0.0</Wander>
+						<Wander_Direct>0.0</Wander_Direct>
+						<Jitter>0</Jitter>
+						<Blur>0</Blur>
+						<Strong_Vibration>0.0</Strong_Vibration>
+						<Weak_Vibration>0.0</Weak_Vibration>
+						<Oscillation1>0.1</Oscillation1>
+						<Oscillation2>0.1</Oscillation2>
+						</Strength_Element>
+					<Strength_Element>
+						<Time>0.5</Time>
+						<Wobble>0</Wobble>
+						<Destable>0.0</Destable>
+						<Direct>0.0</Direct>
+						<Wander>0.0</Wander>
+						<Wander_Direct>0.0</Wander_Direct>
+						<Jitter>0</Jitter>
+						<Blur>0.0</Blur>
+						<Strong_Vibration>0.0</Strong_Vibration>
+						<Weak_Vibration>0.0</Weak_Vibration>
+						<Oscillation1>0.1</Oscillation1>
+						<Oscillation2>0.1</Oscillation2>
+						</Strength_Element>
+					</Strength_Graph>
+				<_Editor>
+					<Category>Entries</Category>
+					</_Editor>
+				<Oscillation1>
+					<Pitch>0.0</Pitch>
+					<Yaw>0.0</Yaw>
+					<Roll>0.1</Roll>
+					<Frequency>1.7</Frequency>
+					</Oscillation1>
+				<Oscillation2>
+					<Pitch>0.0</Pitch>
+					<Yaw>0.0</Yaw>
+					<Roll>0.1</Roll>
+					<Frequency>1.7</Frequency>
+					</Oscillation2>
+				</Camera_Shake>
+			<Camera_Shake>
+				<Name>player_standing</Name>
+				<Wobble>
+					<Pitch>0</Pitch>
+					<Yaw>0</Yaw>
+					<Roll>0</Roll>
+					<Variation>0</Variation>
+					</Wobble>
+				<Destabilization>
+					<Pitch>0.15</Pitch>
+					<Yaw>0.15</Yaw>
+					<Roll>0.15</Roll>
+					<Frequency>0.4</Frequency>
+					</Destabilization>
+				<Direct>
+					<Pitch>0</Pitch>
+					<Yaw>0</Yaw>
+					<Roll>0</Roll>
+					</Direct>
+				<Wander>
+					<Pitch>0</Pitch>
+					<Yaw>0</Yaw>
+					<Frequency>0</Frequency>
+					</Wander>
+				<Wander_Direct>
+					<Pitch>0</Pitch>
+					<Yaw>0</Yaw>
+					</Wander_Direct>
+				<Jitter>
+					<Pitch>0</Pitch>
+					<Yaw>0</Yaw>
+					<Roll>0</Roll>
+					</Jitter>
+				<Strength_Graph>
+					<Strength_Element>
+						<Time>0.0</Time>
+						<Wobble>0</Wobble>
+						<Destable>0.15</Destable>
+						<Direct>0.0</Direct>
+						<Wander>0.0</Wander>
+						<Wander_Direct>0.0</Wander_Direct>
+						<Jitter>0</Jitter>
+						<Blur>0</Blur>
+						<Strong_Vibration>0.0</Strong_Vibration>
+						<Weak_Vibration>0.0</Weak_Vibration>
+						<Oscillation1>0.0</Oscillation1>
+						<Oscillation2>0.0</Oscillation2>
+						</Strength_Element>
+					<Strength_Element>
+						<Time>0.5</Time>
+						<Wobble>0</Wobble>
+						<Destable>0.15</Destable>
+						<Direct>0.0</Direct>
+						<Wander>0.0</Wander>
+						<Wander_Direct>0.0</Wander_Direct>
+						<Jitter>0</Jitter>
+						<Blur>0.0</Blur>
+						<Strong_Vibration>0.0</Strong_Vibration>
+						<Weak_Vibration>0.0</Weak_Vibration>
+						<Oscillation1>0.0</Oscillation1>
+						<Oscillation2>0.0</Oscillation2>
+						</Strength_Element>
+					</Strength_Graph>
+				<_Editor>
+					<Category>Entries</Category>
+					</_Editor>
+				<Oscillation1>
+					<Pitch>0.0</Pitch>
+					<Yaw>0.0</Yaw>
+					<Roll>0.0</Roll>
+					<Frequency>0.0</Frequency>
+					</Oscillation1>
+				<Oscillation2>
+					<Pitch>0.0</Pitch>
+					<Yaw>0.0</Yaw>
+					<Roll>0.0</Roll>
+					<Frequency>0.0</Frequency>
+					</Oscillation2>
+				</Camera_Shake>
+			<Camera_Shake>
+				<Name>player_zooming</Name>
+				<Wobble>
+					<Pitch>0</Pitch>
+					<Yaw>0</Yaw>
+					<Roll>0</Roll>
+					<Variation>0</Variation>
+					</Wobble>
+				<Destabilization>
+					<Pitch>0.1</Pitch>
+					<Yaw>0.1</Yaw>
+					<Roll>0.1</Roll>
+					<Frequency>0.4</Frequency>
+					</Destabilization>
+				<Direct>
+					<Pitch>0</Pitch>
+					<Yaw>0</Yaw>
+					<Roll>0</Roll>
+					</Direct>
+				<Wander>
+					<Pitch>0</Pitch>
+					<Yaw>0</Yaw>
+					<Frequency>0</Frequency>
+					</Wander>
+				<Wander_Direct>
+					<Pitch>0</Pitch>
+					<Yaw>0</Yaw>
+					</Wander_Direct>
+				<Jitter>
+					<Pitch>0</Pitch>
+					<Yaw>0</Yaw>
+					<Roll>0</Roll>
+					</Jitter>
+				<Strength_Graph>
+					<Strength_Element>
+						<Time>0.0</Time>
+						<Wobble>0</Wobble>
+						<Destable>0.1</Destable>
+						<Direct>0.0</Direct>
+						<Wander>0.0</Wander>
+						<Wander_Direct>0.0</Wander_Direct>
+						<Jitter>0</Jitter>
+						<Blur>0</Blur>
+						<Strong_Vibration>0.0</Strong_Vibration>
+						<Weak_Vibration>0.0</Weak_Vibration>
+						<Oscillation1>0.0</Oscillation1>
+						<Oscillation2>0.0</Oscillation2>
+						</Strength_Element>
+					<Strength_Element>
+						<Time>0.5</Time>
+						<Wobble>0</Wobble>
+						<Destable>0.1</Destable>
+						<Direct>0.0</Direct>
+						<Wander>0.0</Wander>
+						<Wander_Direct>0.0</Wander_Direct>
+						<Jitter>0</Jitter>
+						<Blur>0.0</Blur>
+						<Strong_Vibration>0.0</Strong_Vibration>
+						<Weak_Vibration>0.0</Weak_Vibration>
+						<Oscillation1>0.0</Oscillation1>
+						<Oscillation2>0.0</Oscillation2>
+						</Strength_Element>
+					</Strength_Graph>
+				<_Editor>
+					<Category>Entries</Category>
+					</_Editor>
+				<Oscillation1>
+					<Pitch>0.0</Pitch>
+					<Yaw>0.0</Yaw>
+					<Roll>0.0</Roll>
+					<Frequency>0.0</Frequency>
+					</Oscillation1>
+				<Oscillation2>
+					<Pitch>0.0</Pitch>
+					<Yaw>0.0</Yaw>
+					<Roll>0.0</Roll>
+					<Frequency>0.0</Frequency>
+					</Oscillation2>
+				</Camera_Shake>		
+    		</Edit>
+    	<Edit File="data\misc.vpp\tweak_table.xtbl" LIST_ACTION="COMBINE_BY_FIELD:Name,_Editor\Category">
+			<Tweak_Table_Entry>
+				<Name>Vehicle_camera_recenter_rate</Name>
+				<Value><USER_INPUT>AutoCenter</USER_INPUT></Value>
+				<_Editor>
+					<Category>Vehicles</Category>
+					</_Editor>
+				</Tweak_Table_Entry>
+			<Tweak_Table_Entry>
+				<Name>Camera_npc_min_fade_pct</Name>
+				<Value>0.0</Value>
+				<_Editor>
+					<Category>Camera:Fade</Category>
+					</_Editor>
+				</Tweak_Table_Entry>
+			<Tweak_Table_Entry>
+				<Name>Camera_npc_min_fade_dist</Name>
+				<Value>0.0</Value>
+				<_Editor>
+					<Category>Camera:Fade</Category>
+					</_Editor>
+				</Tweak_Table_Entry>
+			<Tweak_Table_Entry>
+				<Name>Camera_npc_max_fade_dist</Name>
+				<Value>0.0</Value>
+				<_Editor>
+					<Category>Camera:Fade</Category>
+					</_Editor>
+				</Tweak_Table_Entry>
+			<Tweak_Table_Entry>
+				<Name>Camera_vehicle_fov</Name>
+				<Value><USER_INPUT>VehicleFOV</USER_INPUT></Value>
+				<_Editor>
+					<Category>Camera</Category>
+					</_Editor>
+				</Tweak_Table_Entry>
+			<Tweak_Table_Entry>
+				<Name>Camera_melee_turn_distance</Name>
+				<Value><USER_INPUT>Automelee</USER_INPUT></Value>
+				<_Editor>
+					<Category>Melee</Category>
+					</_Editor>
+				</Tweak_Table_Entry>
+    		</Edit>
+  		</Changes>
+	</Mod>
